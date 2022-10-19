@@ -1,4 +1,22 @@
+#bodyIndex {
+  display: grid;
+  justify-items: center;
+}
+
 .container {
+  display: grid;
+  justify-items: start;
+  margin: auto;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  width: 60%;
+  box-shadow: 0px 11px 34px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 11px 34px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 11px 34px -3px rgba(0, 0, 0, 0.75);
+}
+
+.containerForm {
   display: grid;
   justify-items: start;
   margin: auto;
