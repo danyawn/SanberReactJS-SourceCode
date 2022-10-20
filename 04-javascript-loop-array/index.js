@@ -73,7 +73,3 @@ for (let index = 0; index < sayurnya.length; index++) {
 }
 
 console.log(sayuran);
-
-// no 10
-console.log("");
-console.log("Jawaban No. 10");
