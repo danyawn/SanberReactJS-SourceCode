@@ -3,7 +3,7 @@ const myCountPromise = (params) => {
     if (params !== undefined) {
       setTimeout(() => {
         resolve(params * 2);
-      });
+      }, 2000);
     } else {
       reject("maaf tidak ada nilai dalam parameter");
     }
