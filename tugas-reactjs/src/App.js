@@ -1,10 +1,12 @@
 import "./App.css";
-import Card from "./components/Card";
+import Card1 from "./tugas7/tugas7";
+import Card2 from "./tugas8/tugas8";
 
 function App() {
   return (
     <div className="">
-      <Card />
+      <Card1 />
+      <Card2 name="Yan Danu Tirta" email="thephantomwarrior02@gmail.com" batch="39" />
     </div>
   );
 }
