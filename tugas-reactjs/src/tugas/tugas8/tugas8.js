@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Card2(props) {
+export default function Tugas8(props) {
   return (
     <div className="card">
       <h2>DATA DIRI PESERTA KELAS REACT JS</h2>

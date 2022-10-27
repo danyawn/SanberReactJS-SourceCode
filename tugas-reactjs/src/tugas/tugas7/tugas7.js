@@ -1,7 +1,6 @@
 import React from "react";
-import "../App.css";
 
-function Card1() {
+function Tugas7() {
   return (
     <div className="card">
       <h2>HI, Saya Yan Danu</h2>
@@ -11,4 +10,4 @@ function Card1() {
   );
 }
 
-export default Card1;
+export default Tugas7;
