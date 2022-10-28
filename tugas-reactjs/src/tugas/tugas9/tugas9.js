@@ -11,7 +11,7 @@ const Tugas9 = () => {
   return (
     <div className="card">
       <p className="text1"> {count} </p>
-      <button className="btn" onClick={handleCount}>
+      <button className="btn border mt-2 border-slate-600" onClick={handleCount}>
         Tambah
       </button>
       {count > 10 ? "State count sudah lebih dari 10!!" : ""}
