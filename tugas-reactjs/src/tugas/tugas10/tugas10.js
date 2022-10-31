@@ -1,17 +1,18 @@
 import React from "react";
 import { Table } from "flowbite-react";
+import { Button } from "flowbite-react";
 
 export const Tugas10 = () => {
   return (
     <div className="card">
-      <Table className="shadow-xl">
-        <Table.Head>
-          <Table.HeadCell className="bg-indigo-500 text-white">NO</Table.HeadCell>
-          <Table.HeadCell className="bg-indigo-500 text-white">NAMA</Table.HeadCell>
-          <Table.HeadCell className="bg-indigo-500 text-white">MATA KULIAH</Table.HeadCell>
-          <Table.HeadCell className="bg-indigo-500 text-white">NILAI</Table.HeadCell>
-          <Table.HeadCell className="bg-indigo-500 text-white">NILAI INDEX</Table.HeadCell>
-          <Table.HeadCell className="bg-indigo-500 text-white">
+      <Table className="">
+        <Table.Head className="bg-indigo-600 text-white">
+          <Table.HeadCell className="">NO</Table.HeadCell>
+          <Table.HeadCell className="">NAMA</Table.HeadCell>
+          <Table.HeadCell className="">MATA KULIAH</Table.HeadCell>
+          <Table.HeadCell className="">NILAI</Table.HeadCell>
+          <Table.HeadCell className="">NILAI INDEX</Table.HeadCell>
+          <Table.HeadCell className="">
             <span className="">ACTION</span>
           </Table.HeadCell>
         </Table.Head>
@@ -23,12 +24,12 @@ export const Tugas10 = () => {
             <Table.Cell>Algoritma</Table.Cell>
             <Table.Cell>80</Table.Cell>
             <Table.Cell>A</Table.Cell>
-            <Table.Cell>
-              <a href="/tables" className="font-medium text-white p-2 mr-2 rounded-md bg-blue-600 hover:underline dark:text-blue-500">
-                Edit
+            <Table.Cell class="flex">
+              <a href="" className="m-2 p-1">
+                <Button clasNames="bg-blue-600 text-white rounded-lg">Edit</Button>
               </a>
-              <a href="/tables" className="font-medium text-white p-2 mr-2 rounded-md bg-red-600 hover:underline dark:text-blue-500">
-                Delete
+              <a href="" className="m-2 p-1 ">
+                <Button className="bg-red-600 text-white rounded-lg">Delete</Button>
               </a>
             </Table.Cell>
           </Table.Row>
@@ -40,12 +41,12 @@ export const Tugas10 = () => {
             <Table.Cell>Matematika</Table.Cell>
             <Table.Cell>70</Table.Cell>
             <Table.Cell>B</Table.Cell>
-            <Table.Cell>
-              <a href="/tables" className="font-medium text-white p-2 mr-2 rounded-md bg-blue-600 hover:underline dark:text-blue-500">
-                Edit
+            <Table.Cell class="flex">
+              <a href="" className="m-2 p-1">
+                <Button clasNames="bg-blue-600 text-white rounded-lg">Edit</Button>
               </a>
-              <a href="/tables" className="font-medium text-white p-2 mr-2 rounded-md bg-red-600 hover:underline dark:text-blue-500">
-                Delete
+              <a href="" className="m-2 p-1 ">
+                <Button className="bg-red-600 text-white rounded-lg">Delete</Button>
               </a>
             </Table.Cell>
           </Table.Row>
@@ -57,12 +58,12 @@ export const Tugas10 = () => {
             <Table.Cell>Kalkulus</Table.Cell>
             <Table.Cell>60</Table.Cell>
             <Table.Cell>C</Table.Cell>
-            <Table.Cell>
-              <a href="/tables" className="font-medium text-white p-2 mr-2 rounded-md bg-blue-600 hover:underline dark:text-blue-500">
-                Edit
+            <Table.Cell className="flex">
+              <a href="" className="m-2 p-1">
+                <Button className="bg-blue-600 text-white rounded-lg">Edit</Button>
               </a>
-              <a href="/tables" className="font-medium text-white p-2 mr-2 rounded-md bg-red-600 hover:underline dark:text-blue-500">
-                Delete
+              <a href="" className="m-2 p-1 ">
+                <Button className="bg-red-600 text-white rounded-lg">Delete</Button>
               </a>
             </Table.Cell>
           </Table.Row>
@@ -74,12 +75,12 @@ export const Tugas10 = () => {
             <Table.Cell>Basis Data</Table.Cell>
             <Table.Cell>90</Table.Cell>
             <Table.Cell>A</Table.Cell>
-            <Table.Cell>
-              <a href="/tables" className="font-medium text-white p-2 mr-2 rounded-md bg-blue-600 hover:underline dark:text-blue-500">
-                Edit
+            <Table.Cell className="flex">
+              <a href="" className="m-2 p-1">
+                <Button className="bg-blue-600 text-white rounded-lg">Edit</Button>
               </a>
-              <a href="/tables" className="font-medium text-white p-2 mr-2 rounded-md bg-red-600 hover:underline dark:text-blue-500">
-                Delete
+              <a href="" className="m-2 p-1 ">
+                <Button className="bg-red-600 text-white rounded-lg">Delete</Button>
               </a>
             </Table.Cell>
           </Table.Row>
