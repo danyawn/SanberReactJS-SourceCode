@@ -45,15 +45,12 @@ const Tugas11 = () => {
   return (
     <div className=" mt-12 flex  justify-center">
       <Table className="">
-        <Table.Head className="!bg-indigo-600 !text-white">
-          <Table.HeadCell className="text-center">NO</Table.HeadCell>
-          <Table.HeadCell className="text-center">NAMA</Table.HeadCell>
-          <Table.HeadCell className="text-center">MATA KULIAH</Table.HeadCell>
-          <Table.HeadCell className="text-center">NILAI</Table.HeadCell>
-          <Table.HeadCell className="text-center">NILAI INDEX</Table.HeadCell>
-          <Table.HeadCell className="text-center">
-            <span className="">ACTION</span>
-          </Table.HeadCell>
+        <Table.Head className="!bg-indigo-600 !text-white text-center">
+          <Table.HeadCell>NO</Table.HeadCell>
+          <Table.HeadCell>NAMA</Table.HeadCell>
+          <Table.HeadCell>MATA KULIAH</Table.HeadCell>
+          <Table.HeadCell>NILAI</Table.HeadCell>
+          <Table.HeadCell>NILAI INDEX</Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
           {data != null &&
@@ -66,16 +63,6 @@ const Tugas11 = () => {
                     <Table.Cell>{result.course}</Table.Cell>
                     <Table.Cell>{result.score}</Table.Cell>
                     <Table.Cell> {handleIndexScore(result.score)} </Table.Cell>
-                    <Table.Cell class="flex justify-center">
-                      <a href="" className="m-2 p-1">
-                        <Button clasNames="bg-blue-600 text-white rounded-lg">Edit</Button>
-                      </a>
-                      <a href="" className="m-2 p-1 ">
-                        <Button color="failure" className=" text-white rounded-lg">
-                          Delete
-                        </Button>
-                      </a>
-                    </Table.Cell>
                   </Table.Row>
                 </>
               );
