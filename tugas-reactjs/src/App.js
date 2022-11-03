@@ -7,18 +7,21 @@ import Tugas11 from "./tugas/tugas11/tugas11";
 import Tugas12 from "./tugas/tugas12/tugas12";
 import Tugas13 from "./tugas/tugas13/tugas13";
 import tugas from "./tugas/index";
+import { GlobalProvider } from "./context/globalContext";
 
 function App() {
   return (
-    <div className="">
-      {/* <Tugas7 className="card" />
+    <GlobalProvider>
+      <div className="">
+        {/* <Tugas7 className="card" />
       <Tugas8 name="Yan Danu Tirta" email="thephantomwarrior02@gmail.com" batch="39" />
       <Tugas9 />
       <Tugas10 />
       <Tugas11 /> 
       <Tugas12 />*/}
-      <Tugas13 />
-    </div>
+        <Tugas13 />
+      </div>
+    </GlobalProvider>
   );
 }
 
