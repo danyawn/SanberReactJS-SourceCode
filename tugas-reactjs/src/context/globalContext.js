@@ -1,10 +1,14 @@
 import React, { createContext } from "react";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const GlobalContext = createContext();
 
 export const GlobalProvider = (props) => {
+  // Use Navigate Declaration
+  let navigate = useNavigate();
+
   // State Declaration
   const [data, setData] = useState(null);
   const [input, setInput] = useState({
@@ -62,19 +66,22 @@ export const GlobalProvider = (props) => {
     let { name, course, score } = input;
 
     if (currentID === -1) {
-      // Create data to API
+      // Create data
       axios
         .post("https://backendexample.sanbercloud.com/api/student-scores", { name, course, score })
         .then((result) => {
           console.log(result);
           setFetchStatus(true);
+          navigate("/view-data");
         })
         .catch((err) => {});
     } else {
+      // Update Data
       axios
         .put(`https://backendexample.sanbercloud.com/api/student-scores/${currentID}`, { name, course, score })
         .then((result) => {
           setFetchStatus(true);
+          navigate("/view-data");
         })
         .catch((err) => {});
     }
@@ -107,19 +114,20 @@ export const GlobalProvider = (props) => {
     let idData = parseInt(event.currentTarget.value);
     // console.log(idData);
     setCurrentID(idData);
-    axios
-      .get(`https://backendexample.sanbercloud.com/api/student-scores/${idData}`)
-      .then((result) => {
-        let data = result.data;
-        setInput({
-          name: data.name,
-          course: data.course,
-          score: data.score,
-        });
-      })
-      .catch((err) => {
-        console.log("error");
-      });
+    navigate(`/edit-data/${idData}`);
+    // axios
+    //   .get(`https://backendexample.sanbercloud.com/api/student-scores/${idData}`)
+    //   .then((result) => {
+    //     let data = result.data;
+    //     setInput({
+    //       name: data.name,
+    //       course: data.course,
+    //       score: data.score,
+    //     });
+    //   })
+    //   .catch((err) => {
+    //     console.log("error");
+    //   });
   };
 
   // Declaration of Object from Function

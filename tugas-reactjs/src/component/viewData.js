@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useContext } from "react";
 import { useEffect } from "react";
-import { TextInput, Label, Table, Button } from "flowbite-react";
-import { GlobalContext } from "../../context/globalContext";
-import Navbar from "../../component/navbar";
+import { Table, Button } from "flowbite-react";
+import { GlobalContext } from "../context/globalContext";
+import { NavLink } from "react-router-dom";
+import Navbar from "../component/navbar";
 
-const Tugas13 = () => {
+const View = () => {
   // Using Context
   const { state, handleFunction } = useContext(GlobalContext);
 
@@ -43,9 +44,15 @@ const Tugas13 = () => {
   return (
     <>
       <Navbar />
+
       <div className=" mt-1 grid justify-center">
         {/* Section Table */}
-        <section className="mt-[100px] m-12 p-10 border border-indigo-300 rounded-lg shadow-xl">
+        <section className=" mt-20 p-10 border border-indigo-300 rounded-lg shadow-xl">
+          <div className="mb-5">
+            <NavLink to={"/create-data"}>
+              <Button>Create New Data</Button>
+            </NavLink>
+          </div>
           <div className="container">
             <Table className="">
               <Table.Head className="!bg-indigo-600 !text-white text-center">
@@ -86,41 +93,9 @@ const Tugas13 = () => {
           </div>
         </section>
         {/* Section Table End */}
-
-        {/* Section Input */}
-        <section className="mt-[20px] m-12 p-10 border border-indigo-300 rounded-lg shadow-xl">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            <div>
-              {/* Input for Name */}
-              <div className="mb-2 block">
-                <Label htmlFor="name" value="Your Name" />
-              </div>
-              <TextInput onChange={handleInput} value={input.name} name="name" id="name" type="text" placeholder="Fullname Here... (Henry)" required={true} />
-            </div>
-
-            {/* Input for Course */}
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="course" value="Your Course" />
-              </div>
-              <TextInput onChange={handleInput} value={input.course} name="course" id="course" type="text" placeholder="Course Here... (Algorithm)" required={true} />
-            </div>
-
-            {/* Input for Score */}
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="score" value="Your Score" />
-              </div>
-              <TextInput onChange={handleInput} value={input.score} name="score" id="score" type="number" placeholder="Score Here...(80)" required={true} />
-            </div>
-
-            <Button type="submit">Submit</Button>
-          </form>
-        </section>
-        {/* Section Input End */}
       </div>
     </>
   );
 };
 
-export default Tugas13;
+export default View;
